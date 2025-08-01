@@ -1,0 +1,10 @@
+import java.util.Optional;
+
+public class OptionalExample {
+    public static void main(String[] args) {
+        Optional<String[]> names = Optional.ofNullable(new String[5]);
+        
+        // Print the length if present
+        System.out.println("Length: " + names.map(arr -> arr.length).orElse(0));
+    }
+}

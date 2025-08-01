@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringJoiner;
+
+public class StringJoinerExample {
+
+
+        // Question 2: Merging two StringJoiners of city names
+        StringJoiner cityJoiner1 = new StringJoiner("-", "Cities: ", "");
+        cityJoiner1.add("New York");
+        cityJoiner1.add("Los Angeles");
+
+        StringJoiner cityJoiner2 = new StringJoiner("-", "Cities: ", "");
+        cityJoiner2.add("Chicago");
+        cityJoiner2.add("Houston");
+
+        // Merging the StringJoiners
+        StringJoiner mergedJoiner1 = cityJoiner1.merge(cityJoiner2);
+        System.out.println("Merged (s1 with s2): " + mergedJoiner1.toString());
+
+        // Merging the other way
+        StringJoiner mergedJoiner2 = cityJoiner2.merge(cityJoiner1);
+        System.out.println("Merged (s2 with s1): " + mergedJoiner2.toString());
+    }
+}

@@ -1,0 +1,28 @@
+import java.util.Optional;
+
+class InvalidEmployeeException extends Exception {
+    public InvalidEmployeeException(String message) {
+        super(message);
+    }
+}
+
+class Employee {
+    // Employee properties
+}
+
+public class EmployeeExample {
+    public static void main(String[] args) {
+        Employee employee = null; // Change this to test
+        
+        try {
+            validateEmployee(Optional.ofNullable(employee));
+        } catch (InvalidEmployeeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    static void validateEmployee(Optional<Employee> employee) throws InvalidEmployeeException {
+        employee.orElseThrow(() -> new InvalidEmployeeException("Employee cannot be null"));
+        System.out.println("Valid Employee");
+    }
+}

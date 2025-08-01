@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringJoiner;
+
+public class StringJoinerExample {
+
+    // Question 1: Construct a new sequence of names in an ArrayList
+    public static void main(String[] args) {
+        
+        // Example names
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+        
+        // Creating a StringJoiner to separate names with a comma and enclose in {}
+        StringJoiner nameJoiner = new StringJoiner(", ", "{", "}");
+        names.forEach(nameJoiner::add);
+        
+        // Display the constructed names
+        System.out.println("Constructed Names: " + nameJoiner.toString());
+
+}
+}

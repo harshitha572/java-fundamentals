@@ -1,0 +1,12 @@
+import java.util.Optional;
+
+public class AddressExample {
+    public static void main(String[] args) {
+        // Example addresses
+        String address = null; // Change this to test
+        Optional<String> optionalAddress = Optional.ofNullable(address);
+        
+        // Print the address if present, else print "India"
+        System.out.println("Address: " + optionalAddress.orElse("India"));
+    }
+}
